@@ -6,10 +6,23 @@
 <ol>
     <% postList.results.forEach(function(post) {%>
         <li>
-            <%= post.message %> - <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss") %>
+            <%= post.postedBy.username %> posted on : <%= format(post.createdAt, "dd MMM yy") %> <br>
+            <img src="<%= post.imageUrl %>" width="200"/> <br>
+            <%= post.message %> <br>
+            Liked by <%= post.likedBy[0].name %> and <%= (post.likedBy.length - 1)%> others <br>
+            Dislikes: <%= post.dislikedBy.length %> <br>
+            Post ID: <%= post.id %> <br><br><br>
         </li>
     <% }); %>
 </ol>
+
+<%if (postList.next) { %>
+    <a href="<%= postList.next %>">Next</a>
+<% } %>
+<%if (postList.previous) { %>
+    <a href="<%= postList.previous %>">Previous</a>
+<% } %>
+
 </body>
 <%- include('_footer') -%>
 </html>
