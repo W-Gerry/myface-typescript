@@ -12,7 +12,7 @@ header {
 }
 
 body {
-    background-color: #1a1a2e;
+    background-color: #252A38;
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -36,14 +36,14 @@ h1 {
 
 .post {
     width: 100%;
-    height: 30vh;
+    height: 45vh;
     background-color: #151820;
     margin-top: 25px;
 }
 
 .post-image {
     width: 100%;
-    height: 55%;
+    height: 60%;
     object-fit: cover;
     margin-left: auto;
     margin-right: auto;
@@ -51,7 +51,10 @@ h1 {
 
 .post-text {
     color: #fff;
-    padding: 10px;
+    padding-top: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
     margin: 0;
 }
 
@@ -91,7 +94,7 @@ h1 {
     position: absolute;
     right: 0;
     width: 90vw;
-    top: calc(20vh - 40px);
+    top: calc(20vh - 80px);
     display: flex;
     flex-direction: row;
     border-top-left-radius: calc(3.5em + 6px);
@@ -106,9 +109,58 @@ h1 {
 }
 
 .user-card-text {
-    padding-left: 1em;
+    padding-left: 16px;
+    padding-top: 28px;
 }
 
 .user-card-text p {
     margin: 0;
+    color: white;
+}
+
+#user-card-name {
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#user-card-username {
+    padding-top: 5px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#user-card-email {
+    font-size: 10px;
+    font-weight: 300;
+}
+
+#user-post-list-title {
+    position: absolute;
+    width: 100%;
+    height: 36px;
+    top: 210px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    margin-bottom: 0;
+}
+
+.user-post-list {
+    position:absolute;
+    justify-content: center;
+    top: calc(20vh + 80px);
+    list-style: none;
+    width: 75vw;
+    display: flex;
+    flex-flow: row wrap;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    margin: 0;
+}
+
+.profile-post {
+    width: 100vw;
+    height: 45vh;
+    background-color: #151820;
+    margin-top: 24px;
 }

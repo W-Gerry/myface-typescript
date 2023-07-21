@@ -5,12 +5,12 @@
 <h1 id="post-list-title">Your Feed</h1>
 <ol class="post-list">
     <% postList.results.forEach(function(post) {%>
-        <li class="post">
-            <img class="post-image" src="<%= post.imageUrl %>" />
-            <div class="post-text">
-                <p class="post-username"><%= post.postedBy.username %></p>
-                <p class="post-date"><%= format(post.createdAt, "dd MMM yy") %></p>
-                <p class="post-message"><%= post.message %></p>
+        <li class="profile-post">
+            <img class="profile-post-image" src="<%= post.imageUrl %>" />
+            <div class="profile-post-text">
+                <p class="profile-post-username"><%= post.postedBy.username %></p>
+                <p class="profile-post-date"><%= format(post.createdAt, "dd MMM yy") %></p>
+                <p class="profile-post-message"><%= post.message %></p>
             </div>
         </li>
     <% }); %>

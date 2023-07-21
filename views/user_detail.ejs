@@ -2,14 +2,30 @@
 <%- include('_head') -%>
 <%- include('_header') -%>
 <body>
-<img class="user-cover-image" src="<%= coverImageUrl %>" />
+<img class="user-cover-image" src="<%= user.coverImageUrl %>" />
 <div class="user-card">
-    <img class="user-profile-image" src="<%= profileImageUrl %>" />
+    <img class="user-profile-image" src="<%= user.profileImageUrl %>" />
     <div class="user-card-text">
-        <p><%= name %></p>
-        <p><%= username %></p>
-        <p><%= email %></p>
+        <p id="user-card-name"><%= user.name %></p>
+        <p id="user-card-username"><%= user.username %></p>
+        <p id="user-card-email"><%= user.email %></p>
     </div>
+</div>
+<p id="user-post-list-title"><%= user.username %>'s' Posts</p>
+<ol class="user-post-list">
+    <% user.posts.forEach(function(post) {%>
+        <li class="profile-post">
+            <img class="post-image" src="<%= post.imageUrl %>" />
+            <div class="post-text">
+                <p class="post-username"><%= user.username %></p>
+                <p class="post-date"><%= format(post.createdAt, "dd MMM yy") %></p>
+                <p class="post-message"><%= post.message %></p>
+            </div>
+        </li>
+    <% }); %>
+</ol>
+<div>
+
 </div>
 </body>
 <%- include('_footer') -%>
